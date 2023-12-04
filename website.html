@@ -9,7 +9,7 @@
       title {
         font-family: "Courier New", Courier, monospace;
       }
-      button {
+      .navy-button {
         padding: 5px 11px;
         border-radius: 3px;
         border: none;
@@ -18,13 +18,23 @@
         font-family: "Courier New", Courier, monospace;
         font-size: larger;
       }
+
+      .red-button {
+        padding: 5px 11px;
+        border-radius: 3px;
+        background-color: maroon;
+        color: white;
+        font-size: larger;
+        border: none;
+        font-family: "Courier New", Courier, monospace;
+      }
     </style>
   </head>
   <body>
-    <button title="tooltip">Hello</button>
+    <button title="This is a tooltip" class="navy-button">Hello</button>
     <p>
       paragraph of
-      <button>hello</button>
+      <button class="red-button">hello</button>
       text
     </p>
     <p></p>
