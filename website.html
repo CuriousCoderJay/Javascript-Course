@@ -31,12 +31,31 @@
     </style>
   </head>
   <body>
-    <button title="This is a tooltip" class="navy-button">Hello</button>
+    <button
+      title="This is a tooltip"
+      class="navy-button"
+      onclick="
+    alert ('Good Job!');
+    "
+    >
+      Hello
+    </button>
     <p>
       paragraph of
       <button class="red-button">hello</button>
       text
     </p>
-    <p></p>
+
+    <script>
+      /* This is one way to incorporate Javascript in the code. We use 
+      comments to explain how our code is wired, clarifying the purpose,
+       and with JavaScript in particular we can 'comment the code', which 
+       is when you dont want code to run, but don't want to delete, refer
+        to the line below.*/
+      //alert("hello");
+
+      console.log(2 + 2);
+      console.log("Hello," + "all" + "coders");
+    </script>
   </body>
 </html>
