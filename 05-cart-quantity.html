@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity Project</title>
+
+    <!--This mini project creates a simplified version of the 'Add to Cart' feature, commonly seen in online stores. It focuses on dynamically changing the cart quantity as items are added.-->
+  </head>
+  <body>
+    <style>
+      button {
+        padding: 6px 8px;
+        margin: 2px 2px;
+        border-radius: 4px;
+        border-width: 1px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: rgba(150, 6, 6, 0.829);
+        color: white;
+        /*Just some simple style elements, to refamilarize with CSS. I went with these choice for no particular reason other than CSS practice. */
+      }
+    </style>
+
+    <!--We've added the 'onclick' at the starting tag of our buttons to incorporate functionality to each button.-->
+    <!--We also used the back ticks to create a template string, which is what allows us to inser a value into a string, this is know as interpolation-->
+
+    <p>Cart Quantity</p>
+    <button
+      onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      Show Quantity
+    </button>
+    <!--The first button, labeled "Show Quantity", uses a template string within a console.log() statement to display the current cart quantity.-->
+
+    <button
+      onclick="
+      cartQuantity++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      Add to Cart
+    </button>
+
+    <button
+      onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="
+    cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      +3
+    </button>
+    <!--Subsequent buttons, labeled with different quantities (+1, +2, +3, and "Reset Cart"), update the cartQuantity variable accordingly and log the updated quantity to the console.-->
+    <button
+      onclick="
+    cartQuantity = 0;
+    console.log ('Cart was reset.');
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      Reset Cart
+    </button>
+    <!--The "Reset Cart" button sets cartQuantity back to 0 and logs a reset message.-->
+    <script>
+      let cartQuantity = 0;
+    </script>
+    <!-- A variable cartQuantity is declared at the beginning and initialized to 0 within a <script> tag. The cartQuantity variable is updated based on the button clicked, demonstrating basic arithmetic operations and reassignment of variable values.-->
+  </body>
+</html>
