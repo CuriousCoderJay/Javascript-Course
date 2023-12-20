@@ -10,6 +10,7 @@
   <body>
     <style>
       button {
+        /*Just some simple style elements, to refamilarize with CSS. I went with these choice for no particular reason other than CSS practice. */
         padding: 6px 8px;
         margin: 2px 2px;
         border-radius: 4px;
@@ -20,7 +21,6 @@
         cursor: pointer;
         background-color: rgba(150, 6, 6, 0.829);
         color: white;
-        /*Just some simple style elements, to refamilarize with CSS. I went with these choice for no particular reason other than CSS practice. */
       }
     </style>
 
@@ -66,6 +66,22 @@
     <!--Subsequent buttons, labeled with different quantities (+1, +2, +3, and "Reset Cart"), update the cartQuantity variable accordingly and log the updated quantity to the console.-->
     <button
       onclick="
+    cartQuantity+= 4;
+    console.log(`Cart Quantity: ${cartQuantity}`);"
+    >
+      +4
+    </button>
+    <!--Lesson 5h: Add a +4 and + 5 button using '+='-->
+    <button
+      onclick="
+    cartQuantity +=5;
+    console.log(`Cary Quantity: ${cartQuantity}`)"
+    >
+      +5
+    </button>
+
+    <button
+      onclick="
     cartQuantity = 0;
     console.log ('Cart was reset.');
     console.log(`Cart Quantity: ${cartQuantity}`);
@@ -74,6 +90,32 @@
       Reset Cart
     </button>
     <!--The "Reset Cart" button sets cartQuantity back to 0 and logs a reset message.-->
+    <button
+      onclick="
+    cartQuantity --;
+    console.log(`Cart Quantity: ${cartQuantity}`); "
+    >
+      Remove from Cart
+    </button>
+    <!--Lesson 5i: Add a Remove from Cart Button.
+    Lesson 5j: Add 2 Buttons -2 & -3
+  5k: Use the shortcuts '--' & '-=' -->
+    <button
+      onclick="
+  cartQuantity -= 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  "
+    >
+      -2
+    </button>
+    <button
+      onclick="
+cartQuantity -= 3;
+console.log(`Cart Quantity: ${cartQuantity}`);
+"
+    >
+      -3
+    </button>
     <script>
       let cartQuantity = 0;
     </script>
